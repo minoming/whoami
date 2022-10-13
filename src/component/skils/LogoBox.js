@@ -15,7 +15,32 @@ import ReactLogo from "./logos/ReactLogo";
 import GradleLogo from "./logos/GradleLogo";
 import YarnLogo from "./logos/YarnLogo";
 
-export default function LogoBox() {
+export default function LogoBox(props) {
+
+  const _logoComponents = {
+    "html": HtmlLogo,
+    "js": JavascriptLogo,
+    "less": LesscssLogo,
+    "apache": ApacheLogo,
+    "docker": DockerLogo,
+    "backbone": BackboneLogo,
+    "grunt": GruntLogo,
+    "jenkins": JenkinsLogo,
+    "webpack": WebpackLogo,
+    "kubernetes": KubernetesLogo,
+    "linux": LinuxLogo,
+    "nginx": NginxLogo,
+    "npm": NpmLogo,
+    "react": ReactLogo,
+    "gradle": GradleLogo,
+    "yarn": YarnLogo
+  };
+
+  const _getLogoComponent = (logoName) => {
+    const LogoComponent = _logoComponents[logoName];
+    return <LogoComponent className="mr-6"/>
+  };
+
   return (
     <section className="text-gray-600 body-font w-full">
       <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
@@ -23,12 +48,12 @@ export default function LogoBox() {
           BUSINESS
         </h2> */}
         <h1 className="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
-          <span>Basics</span>
+          <span>{props.title}</span>
         </h1>
         <div className="flex flex-row mt-3">
-          <JavascriptLogo></JavascriptLogo>
-          <HtmlLogo className="ml-5"></HtmlLogo>
-          <LesscssLogo className="ml-5"></LesscssLogo>
+          {props.logo.map((logoName) => (
+            _getLogoComponent(logoName)
+          ))}
         </div>
         <p className="text-xs text-gray-500 mt-5">
           Literally you probably haven't heard of them jean shorts.
