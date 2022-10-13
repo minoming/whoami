@@ -17,24 +17,23 @@ import YarnLogo from "./logos/YarnLogo";
 
 export default function LogoBox() {
   return (
-    <section class="text-gray-600 body-font">
-        <DockerLogo></DockerLogo>
-        <JavascriptLogo></JavascriptLogo>
-        <ApacheLogo></ApacheLogo>
-        <BackboneLogo></BackboneLogo>
-        <JenkinsLogo></JenkinsLogo>
-        <WebpackLogo></WebpackLogo>
-        <KubernetesLogo></KubernetesLogo>
-        <LesscssLogo></LesscssLogo>
-        <LinuxLogo></LinuxLogo>
-        <HtmlLogo></HtmlLogo>
-        <GruntLogo></GruntLogo>
-        <NginxLogo></NginxLogo>
-        <NpmLogo></NpmLogo>
-        <YarnLogo></YarnLogo>
-        <ReactLogo></ReactLogo>
-        <GradleLogo></GradleLogo>
+    <section className="text-gray-600 body-font w-full">
+      <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
+        {/* <h2 className="text-sm tracking-widest title-font mb-1 font-medium">
+          BUSINESS
+        </h2> */}
+        <h1 className="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+          <span>Basics</span>
+        </h1>
+        <div className="flex flex-row mt-3">
+          <JavascriptLogo></JavascriptLogo>
+          <HtmlLogo className="ml-5"></HtmlLogo>
+          <LesscssLogo className="ml-5"></LesscssLogo>
+        </div>
+        <p className="text-xs text-gray-500 mt-5">
+          Literally you probably haven't heard of them jean shorts.
+        </p>
+      </div>
     </section>
   );
 }
- 
