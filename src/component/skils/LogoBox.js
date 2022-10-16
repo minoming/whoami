@@ -21,19 +21,19 @@ export default function LogoBox(props) {
     "html": HtmlLogo,
     "js": JavascriptLogo,
     "less": LesscssLogo,
-    "apache": ApacheLogo,
-    "docker": DockerLogo,
     "backbone": BackboneLogo,
-    "grunt": GruntLogo,
-    "jenkins": JenkinsLogo,
-    "webpack": WebpackLogo,
-    "kubernetes": KubernetesLogo,
-    "linux": LinuxLogo,
-    "nginx": NginxLogo,
-    "npm": NpmLogo,
     "react": ReactLogo,
+    "grunt": GruntLogo,
     "gradle": GradleLogo,
-    "yarn": YarnLogo
+    "npm": NpmLogo,
+    "yarn": YarnLogo,
+    "webpack": WebpackLogo,
+    "linux": LinuxLogo,
+    "docker": DockerLogo,
+    "kubernetes": KubernetesLogo,
+    "apache": ApacheLogo,
+    "nginx": NginxLogo,
+    "jenkins": JenkinsLogo,
   };
 
   const _getLogoComponent = (logoName) => {
@@ -42,7 +42,7 @@ export default function LogoBox(props) {
   };
 
   return (
-    <section className="text-gray-600 body-font w-full">
+    <section className="text-gray-600 body-font w-full py-5">
       <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
         {/* <h2 className="text-sm tracking-widest title-font mb-1 font-medium">
           BUSINESS
